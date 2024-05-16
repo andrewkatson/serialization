@@ -8,8 +8,9 @@ cc_library(
         "include/**/*.hpp",
         "include/**/*.h",
         "include/**/*.ipp",
-    ]),
+    ]) ,
     includes = ["include"],
+    srcs = glob(["src/**/*.cpp", "src/**/*.ipp"]),
     deps = [
         "@boost.array",
         "@boost.assert",

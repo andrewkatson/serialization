@@ -1,0 +1,15 @@
+module(
+    name = "boost.serialization.test",
+)
+
+local_path_override(
+    module_name = "boost.serialization",
+    path = ".."
+)
+
+bazel_dep(name = "boost.compatibility", version = "1.83.0.bzl.1")
+bazel_dep(name = "boost.filesystem", version = "1.83.0.bzl.3")
+bazel_dep(name = "boost.math", version = "1.83.0.bzl.1")
+bazel_dep(name = "boost.serialization")
+bazel_dep(name = "boost.test", version = "1.83.0.bzl.4")
+
