@@ -4,13 +4,16 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "boost.serialization",
+    srcs = glob([
+        "src/**/*.cpp",
+        "src/**/*.ipp",
+    ]),
     hdrs = glob([
         "include/**/*.hpp",
         "include/**/*.h",
         "include/**/*.ipp",
-    ]) ,
+    ]),
     includes = ["include"],
-    srcs = glob(["src/**/*.cpp", "src/**/*.ipp"]),
     deps = [
         "@boost.array",
         "@boost.assert",
